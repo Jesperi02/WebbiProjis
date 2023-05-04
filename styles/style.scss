@@ -1,6 +1,7 @@
 $header-bg: #f8efe6;
 $light-brown: #ad6116;
 $dark-leather: #60350C;
+$top-bar-font-size: 14px;
 
 div.header {
 	display: flex;
@@ -16,28 +17,43 @@ div.header {
 		height: 8px;
 		margin-top: 0;
 		width: 100%;
-	}
 
-	.row {
-		width: 100%;
-		background-color: $header-bg;
-
-		.box {
-			height: 100px;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			border-left: solid 1px $light-brown;
-			display: flex;
-			justify-content: center;
-
-			img {
-				width: auto;
-				height: 100%;
+		.row {
+			width: 100%;
+			background-color: $header-bg;
+	
+			.box {
+				height: 100px;
+				display: flex;
+				justify-content: center;
+				font-size: $top-bar-font-size;
+	
+				&.main {
+					border-left: solid 1px $light-brown;
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+	
+	
+				.highlight {
+					color: $light-brown;
+					font-size: $top-bar-font-size + 2;
+				}	
+	
+				img {
+					width: auto;
+					height: 100%;
+				}
 			}
-		}
-
-		.col:first-child .box {
-			border-left: transparent;
+	
+			.col .short {
+				height: 30px;
+				width: fit-content;
+			}
+	
+			.col:first-child .box {
+				border-left: transparent;
+			}
 		}
 	}
 }
