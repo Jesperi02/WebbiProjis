@@ -1,11 +1,43 @@
 $header-bg: #f8efe6;
+$light-brown: #ad6116;
+$dark-leather: #60350C;
 
 div.header {
 	display: flex;
-	background-color: $header-bg;
+	background-color: transparent;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
-	height: 300px;
-	width: 100%;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	.top-bar {
+		background-color: $light-brown;
+		height: 8px;
+		margin-top: 0;
+		width: 100%;
+	}
+
+	.row {
+		width: 100%;
+		background-color: $header-bg;
+
+		.box {
+			height: 100px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-left: solid 1px $light-brown;
+			display: flex;
+			justify-content: center;
+
+			img {
+				width: auto;
+				height: 100%;
+			}
+		}
+
+		.col:first-child .box {
+			border-left: transparent;
+		}
+	}
 }
