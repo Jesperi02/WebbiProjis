@@ -64,9 +64,18 @@ div.header {
 				height: 30px;
 				width: fit-content;
 				align-self: center;
-
+				
 				.box {
+					display: flex;
 					height: 30px;
+				}
+
+				#phoneImage {
+					justify-content: right;
+				}
+
+				#phoneNumber {
+					justify-content: left;
 				}
 			}
 

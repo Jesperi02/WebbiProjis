@@ -53,7 +53,14 @@ div.header .row .col.short {
   align-self: center;
 }
 div.header .row .col.short .box {
+  display: flex;
   height: 30px;
+}
+div.header .row .col.short #phoneImage {
+  justify-content: right;
+}
+div.header .row .col.short #phoneNumber {
+  justify-content: left;
 }
 div.header .row .col:first-child .box {
   border-left: transparent;
