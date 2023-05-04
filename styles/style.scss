@@ -1,7 +1,9 @@
 $header-bg: #f8efe6;
 $light-brown: #ad6116;
+$lighter-brown: #bb824a;
 $dark-leather: #60350C;
-$top-bar-font-size: 14px;
+$header-font-size: 18px;
+$header-height: 120px;
 
 div.header {
 	display: flex;
@@ -17,41 +19,58 @@ div.header {
 		height: 8px;
 		margin-top: 0;
 		width: 100%;
+	}
 
-		.row {
-			width: 100%;
-			background-color: $header-bg;
-	
-			.box {
-				height: 100px;
-				display: flex;
-				justify-content: center;
-				font-size: $top-bar-font-size;
-	
-				&.main {
-					border-left: solid 1px $light-brown;
-					margin-top: 10px;
-					margin-bottom: 10px;
-				}
-	
-	
-				.highlight {
-					color: $light-brown;
-					font-size: $top-bar-font-size + 2;
-				}	
-	
-				img {
-					width: auto;
-					height: 100%;
+	.row {
+		width: 100%;
+		background-color: $header-bg;
+
+		.box {
+			height: $header-height - 20;
+			display: flex;
+			justify-content: center;
+
+			&.main {
+				border-left: solid 1px $light-brown;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			span {
+				font-weight: 500;
+				font-size: $header-font-size;
+
+				&:hover {
+					color: $lighter-brown;
 				}
 			}
-	
-			.col .short {
+
+			&.highlight span {
+				color: $light-brown;
+				font-weight: 700;
+				font-size: $header-font-size + 2;
+			}
+
+			img {
+				width: auto;
+				height: 100%;
+			}
+		}
+
+		.col {
+			height: $header-height;
+
+			&.short {
 				height: 30px;
 				width: fit-content;
+				align-self: center;
+
+				.box {
+					height: 30px;
+				}
 			}
-	
-			.col:first-child .box {
+
+			&:first-child .box {
 				border-left: transparent;
 			}
 		}
