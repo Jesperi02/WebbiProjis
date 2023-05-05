@@ -64,4 +64,58 @@ div.header .row .col.short #phoneNumber {
 }
 div.header .row .col:first-child .box {
   border-left: transparent;
+}
+
+nav.header {
+  height: 120px;
+  width: 100%;
+}
+nav.header div.container {
+  height: 100%;
+}
+nav.header div.container > * {
+  margin-left: 50px;
+  padding-left: 50px;
+  border-left: solid 1px #ad6116;
+}
+nav.header div.container > *:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: transparent;
+}
+nav.header div.container img {
+  height: 100%;
+  width: auto;
+}
+nav.header div.container #nav {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+nav.header div.container #nav ul {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  align-content: center;
+  flex-basis: auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+nav.header div.container #nav ul li {
+  padding-left: 50px;
+  flex-grow: 1;
+}
+nav.header div.container #nav ul li:first-child {
+  padding-left: 0;
+}
+nav.header div.container #nav ul li a {
+  font-weight: 500;
+  font-size: 18px;
+}
+nav.header div.container #nav ul li a:hover {
+  color: #bb824a;
+}
+nav.header div.container #nav ul li a.active {
+  color: #ad6116;
+  font-weight: 700;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
