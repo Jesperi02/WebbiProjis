@@ -16,15 +16,10 @@
 .header nav div.container {
   height: 100%;
 }
-.header nav div.container > * {
+.header nav div.container > div {
   margin-left: 50px;
   padding-left: 50px;
   border-left: solid 1px #ad6116;
-}
-.header nav div.container > *:first-child {
-  margin-left: 0;
-  padding-left: 0;
-  border-left: transparent;
 }
 .header nav div.container img {
   height: 100%;

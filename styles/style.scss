@@ -25,16 +25,10 @@ $header-height: 120px;
 		div.container {
 			height: 100%;
 	
-			>* {
+			>div {
 				margin-left: 50px;
 				padding-left: 50px;
 				border-left: solid 1px $light-brown;
-		
-				&:first-child {
-					margin-left: 0;
-					padding-left: 0;
-					border-left: transparent;
-				}
 			}
 	
 			img {
