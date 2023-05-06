@@ -72,3 +72,28 @@ $header-height: 120px;
 		}
 	}
 }
+
+.hero {
+	background-image: url(../img/leatherwork.jpg);
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&::before {
+		background-color: rgba(0, 0, 0, 0.5);
+		content: '';
+		height: 100%;
+		width: 100%;
+		position:absolute;
+	}
+
+	h1 {
+		max-width: 950px;
+	}
+
+	
+}
