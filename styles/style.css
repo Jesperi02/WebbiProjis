@@ -4,7 +4,7 @@
 }
 .header .top-bar {
   background-color: #ad6116;
-  height: 8px;
+  height: 6px;
   margin-top: 0;
   width: 100%;
 }
@@ -13,42 +13,33 @@
   width: 100%;
   background-color: #f8efe6;
 }
-.header nav div.container {
-  height: 100%;
+.header nav .divider {
+  background-color: #ad6116;
+  width: 1px;
+  height: 80%;
+  margin: 0 50px;
 }
-.header nav div.container > div {
-  margin-left: 50px;
-  padding-left: 50px;
-  border-left: solid 1px #ad6116;
-}
-.header nav div.container img {
+.header nav img {
   height: 100%;
   width: auto;
 }
-.header nav div.container img#phoneImage {
-  height: 30px;
-  width: 30px;
+.header nav img#phoneImage {
+  height: 25px;
+  width: 25px;
   margin-right: 10px;
 }
-.header nav div.container div {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 90%;
-  justify-content: center;
-  align-items: center;
-}
-.header nav div.container div ul {
+.header nav ul {
   width: 500px;
 }
-.header nav div.container div ul li a {
+.header nav ul li a {
   font-weight: 500;
   font-size: 18px;
 }
-.header nav div.container div ul li a:hover {
+.header nav ul li a:hover {
   color: #bb824a;
 }
-.header nav div.container div ul li a.active {
-  color: #ad6116;
+.header nav ul li a.active {
+  color: #ad6116 !important;
   font-weight: 700;
   font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
