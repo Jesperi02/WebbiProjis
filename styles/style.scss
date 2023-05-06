@@ -10,11 +10,19 @@ $header-height: 120px;
 	display: flex;
 	flex-direction: column;
 
-	.top-bar {
+	.bar {
 		background-color: $light-brown;
-		height: 6px;
-		margin-top: 0;
 		width: 100%;
+
+		&.top {
+			height: 6px;
+			margin-top: 0;
+		}
+
+		&.bottom {
+			height: 1px;
+			margin-bottom: 0px;
+		}
 	}
 
 	nav {

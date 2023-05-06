@@ -2,11 +2,17 @@
   display: flex;
   flex-direction: column;
 }
-.header .top-bar {
+.header .bar {
   background-color: #ad6116;
+  width: 100%;
+}
+.header .bar.top {
   height: 6px;
   margin-top: 0;
-  width: 100%;
+}
+.header .bar.bottom {
+  height: 1px;
+  margin-bottom: 0px;
 }
 .header nav {
   height: 120px;
