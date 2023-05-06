@@ -1,120 +1,64 @@
-div.header {
+.header {
   display: flex;
-  background-color: transparent;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  flex-wrap: wrap;
   flex-direction: column;
 }
-div.header .top-bar {
+.header .top-bar {
   background-color: #ad6116;
   height: 8px;
   margin-top: 0;
   width: 100%;
 }
-div.header .row {
+.header nav {
+  height: 120px;
   width: 100%;
   background-color: #f8efe6;
 }
-div.header .row .box {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-}
-div.header .row .box.main {
-  border-left: solid 1px #ad6116;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-div.header .row .box span {
-  font-weight: 500;
-  font-size: 18px;
-}
-div.header .row .box span:hover {
-  color: #bb824a;
-}
-div.header .row .box.highlight span {
-  color: #ad6116;
-  font-weight: 700;
-  font-size: 20px;
-}
-div.header .row .box img {
-  width: auto;
+.header nav div.container {
   height: 100%;
 }
-div.header .row .col {
-  height: 120px;
-}
-div.header .row .col.short {
-  height: 30px;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-self: center;
-}
-div.header .row .col.short .box {
-  display: flex;
-  height: 30px;
-}
-div.header .row .col.short #phoneImage {
-  justify-content: right;
-}
-div.header .row .col.short #phoneNumber {
-  justify-content: left;
-}
-div.header .row .col:first-child .box {
-  border-left: transparent;
-}
-
-nav.header {
-  height: 120px;
-  width: 100%;
-}
-nav.header div.container {
-  height: 100%;
-}
-nav.header div.container > * {
+.header nav div.container > * {
   margin-left: 50px;
   padding-left: 50px;
   border-left: solid 1px #ad6116;
 }
-nav.header div.container > *:first-child {
+.header nav div.container > *:first-child {
   margin-left: 0;
   padding-left: 0;
   border-left: transparent;
 }
-nav.header div.container img {
+.header nav div.container img {
   height: 100%;
   width: auto;
 }
-nav.header div.container #nav {
+.header nav div.container img#phoneImage {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.header nav div.container div {
   width: -moz-fit-content;
   width: fit-content;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
 }
-nav.header div.container #nav ul {
+.header nav div.container div ul {
   display: flex;
-  width: 400px;
+  width: 500px;
   flex-direction: row;
   align-content: center;
   flex-basis: auto;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-around;
 }
-nav.header div.container #nav ul li {
-  padding-left: 50px;
-  flex-grow: 1;
-}
-nav.header div.container #nav ul li:first-child {
-  padding-left: 0;
-}
-nav.header div.container #nav ul li a {
+.header nav div.container div ul li a {
   font-weight: 500;
   font-size: 18px;
 }
-nav.header div.container #nav ul li a:hover {
+.header nav div.container div ul li a:hover {
   color: #bb824a;
 }
-nav.header div.container #nav ul li a.active {
+.header nav div.container div ul li a.active {
   color: #ad6116;
   font-weight: 700;
   font-size: 20px;
