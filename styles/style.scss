@@ -49,13 +49,7 @@ $header-height: 120px;
 				align-items: center;
 	
 				ul {
-					display: flex;
 					width: 500px;
-					flex-direction: row;
-					align-content: center;
-					flex-basis: auto;
-					flex-wrap: nowrap;
-					justify-content: space-around;
 	
 					li {
 						a {

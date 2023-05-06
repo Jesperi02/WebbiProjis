@@ -38,13 +38,7 @@
   align-items: center;
 }
 .header nav div.container div ul {
-  display: flex;
   width: 500px;
-  flex-direction: row;
-  align-content: center;
-  flex-basis: auto;
-  flex-wrap: nowrap;
-  justify-content: space-around;
 }
 .header nav div.container div ul li a {
   font-weight: 500;
