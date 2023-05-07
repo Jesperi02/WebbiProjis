@@ -9,9 +9,10 @@ $header-height: 120px;
 $header-top-bar-height: 6px;
 $header-bottom-bar-height: 1px;
 
-$hero-height: 400px;
+$hero-height: 600px;
 
 $button-bg: #f6f2ee;
+$button-light-bg: #ffffff;
 $button-color: #292726;
 $button-active-color: #bb824a;
 
@@ -107,33 +108,63 @@ $button-active-color: #bb824a;
 		background-position: center;
 		min-height: $hero-height;
 		color: $white-text;
+		justify-content: center;
 
 		
 		h1 {
 			max-width: 950px;
 			z-index: 1;
+			margin-bottom: 30px;
 		}
 	
 		div {
 			z-index: 1;
-
-			button {
-				background-color: $button-bg;
-				color: $button-color;
-				border: 1px solid $button-color;
-				border-radius: 0px;
-				font-size: large;
-
-				&:active {
-					border-color: $button-color;
-					background-color: $button-active-color;
-				}
-			}
 		}
+	}
+}
+
+.link-button {
+	background-color: $button-bg;
+	color: $button-color;
+	border: 1px solid $button-color;
+	border-radius: 0px;
+	font-size: large;
+
+	&:active {
+		border-color: $button-color !important; 
+		background-color: $button-active-color !important;
+	}
+
+	&:hover {
+		background-color: $button-bg;
+		border: 1px solid $button-color;
+		color: $button-color;
 	}
 }
 
 .features {
 	background-color: $header-bg;
 	min-height: $hero-height;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		padding-bottom: 15px;
+	}
+
+	div {
+		display: flex;
+		flex-flow: row wrap;
+		width: 65%;
+		justify-content: space-evenly;
+
+		div.card {
+			margin-bottom: 20px;
+
+			.link-button {
+				background-color: $button-light-bg;
+			}
+		}
+	}
 }
