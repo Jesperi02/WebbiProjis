@@ -17,11 +17,11 @@
 .header nav {
   height: 120px;
   width: 100%;
-  background-color: #f8efe6;
+  background-color: #fdfbf9;
 }
 .header nav .divider {
   background-color: #ad6116;
-  width: 1px;
+  width: 2px;
   height: 80%;
   margin: 0 50px;
 }
@@ -92,4 +92,9 @@
 .hero-wrapper .hero div button:active {
   border-color: #292726;
   background-color: #bb824a;
+}
+
+.features {
+  background-color: #fdfbf9;
+  min-height: 400px;
 }/*# sourceMappingURL=style.css.map */

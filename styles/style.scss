@@ -1,4 +1,4 @@
-$header-bg: #f8efe6;
+$header-bg: #fdfbf9;
 $light-brown: #ad6116;
 $lighter-brown: #bb824a;
 $dark-leather: #60350C;
@@ -41,7 +41,7 @@ $button-active-color: #bb824a;
 		
 		.divider {
 			background-color: $light-brown;
-			width: 1px;
+			width: 2px;
 			height: 80%;
 			margin: 0 50px;
 		}
@@ -131,4 +131,9 @@ $button-active-color: #bb824a;
 			}
 		}
 	}
+}
+
+.features {
+	background-color: $header-bg;
+	min-height: $hero-height;
 }
