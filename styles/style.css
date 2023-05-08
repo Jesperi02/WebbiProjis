@@ -1,6 +1,10 @@
 .header {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  width: 100%;
 }
 .header .bar {
   background-color: #ad6116;
