@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Suutari Niemi Lappeenranta</title>
+
+	<!-- Bootstrap -->
+	<link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script defer src="../bootstrap/dist/js/bootstrap.min.js"></script>  
+
+	<!-- styles -->
+	<link href="../styles/style.css" rel="stylesheet">
+
+	<!-- Typescript -->
+	<script defer src="../scripts/index.js"></script>
+  </head>
+  
+  <body>
+	<div class="header fixed-top">
+		<div class="bar top"></div>
+
+		<nav class="navbar justify-content-center flex-row flex-m-column">
+			<img src="../img/SuutariNiemi.png" alt="Suutari Niemi Lappeenranta">
+	
+			<div class="divider"></div>
+
+			<ul id="menuList" class="navbar-nav nav-fill flex-row align-items-center menuList">
+				<li class="nav-item">
+					<a href="#" class="nav-link active">Etusivu</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Palvelut</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Yhteystiedot</a>
+				</li>
+			</ul>
+			
+			<div class="divider phone"></div>
+
+			<div class="navbar-nav flex-row phone">
+				<img id="phoneImage" src="../img/puhelinIkoni.png"	alt="Puhelinnumero: ">
+				<span>044 454 6868</span>
+			</div>
+
+			<button class="btn toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false">
+				<div class="navbar-toggler-icon"></div>
+			</button>
+		</nav>
+
+		<div class="bar bottom"></div>
+	</div>
+
+	<div id="sidebar" class="flex-shrink-0 p-3 bg-light collapse sidebar">
+		<ul class="navbar-nav nav-fill flex-col align-items-center menuList">
+			<li class="nav-item">
+				<a href="#" class="nav-link active">Etusivu</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Palvelut</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Yhteystiedot</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="hero-wrapper">
+		<div class="px-4 py-5 text-center hero">
+			<h1 class="display-5 fw-bold"> Suutari Niemi - Askeltasi keventävä kenkähuolto Lappeenrannassa </h1>
+			<div class="col-lg-6 mx-auto">
+				<p class="lead mb-4">
+					Suutari Niemi on Lappeenrannan luotettavin ja ammattitaitoisin kenkien huoltoliike. 
+					Meillä on vuosien kokemus kenkien korjaamisesta ja huoltamisesta, ja olemme ylpeitä siitä, 
+					että pystymme antamaan asiakkaillemme aina parasta mahdollista palvelua.
+				</p>
+				  <button type="button" class="btn link-button btn-primary btn-xl px-5 py-3 gap-3">Varaa aika</button>
+			  </div>
+		</div>
+	</div>
+
+	<div class="px-4 py-5 text-center features">
+		<h2>Tutustu monipuolisiin palveluihimme!</h2>
+
+		<div>
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="../img/leatherwork2.jpg" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Suutaripalvelut</h5>
+				  <p class="card-text">Parhaimmat puhdistus, korjaus ja kiillotus palvelut Lappeenrannassa. - nyt reiluun hintaan!</p>
+				  <a href="#" class="btn link-button btn-primary">Suutaripalvelut</a>
+				</div>
+			</div>
+	
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="../img/leatherwork3.jpg" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Venytyspalvelut</h5>
+				  <p class="card-text">Pohjallisten ja korkojen vaihto sekä erilaiset venyttämis- ja suoristuspalvelut.</p>
+				  <a href="#" class="btn link-button btn-primary">Suutaripalvelut</a>
+				</div>
+			</div>
+	
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="../img/shoesupplies.jpg" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Tarvikkeet</h5>
+				  <p class="card-text">Meillä on myös laaja valikoima kenkätarvikkeita, kuten sukkia, sisäpohjia ja kenkälankkeja.</p>
+				  <a href="#" class="btn link-button btn-primary">Suutaripalvelut</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="news container my-5">
+		<div class="p-5 text-center bg-body-tertiary rounded-3">
+		  	<h1 class="text-body-emphasis">Ajankohtaista</h1>
+
+		  	<h5>
+				Korkea inflaatio vaikuttaa meidänkin hintoihin. 
+				Katso tämä tilastokeskuksen kuluttajahintaindexi taulukko!
+			</h5>
+
+			<table class="table" id="consumerpriceindexTable">
+			</table>
+		</div>
+	</div>
+
+  </body>
+</html>

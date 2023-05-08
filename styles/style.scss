@@ -1,0 +1,240 @@
+$header-bg: #fdfbf9;
+$light-brown: #ad6116;
+$lighter-brown: #bb824a;
+$dark-leather: #60350C;
+$white-text: #f6f2ee;
+
+$header-font-size: 18px;
+$header-height: 120px;
+$header-top-bar-height: 6px;
+$header-bottom-bar-height: 1px;
+
+$sidebar-divider: #353535c2;
+
+$hero-height: 600px;
+
+$button-bg: #f6f2ee;
+$button-light-bg: #ffffff;
+$button-color: #292726;
+$button-active-color: #bb824a;
+
+.header {
+	display: flex;
+	flex-direction: column;
+
+	.bar {
+		background-color: $light-brown;
+		width: 100%;
+
+		&.top {
+			height: 6px;
+			margin-top: 0;
+		}
+
+		&.bottom {
+			height: 1px;
+			margin-bottom: 0px;
+		}
+	}
+
+	nav {
+		height: 120px;
+		width: 100%;
+		background-color: $header-bg;
+		
+		.divider {
+			background-color: $light-brown;
+			width: 2px;
+			height: 80%;
+			margin: 0 50px;
+		}
+
+		.phone {
+			display: none;
+
+			@media (min-width: 1200px) { 
+				display: flex;
+			}
+		}
+
+		.toggler {
+			display: flex;
+			border: 1px solid $sidebar-divider;
+
+			@media (min-width: 992px) { 
+				display: none;
+			}
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+
+			&#phoneImage {
+				height: 25px;
+				width: 25px;
+				margin-right: 10px;
+			}
+		}
+
+		#menuList {
+			width: 500px;
+			display: none;
+
+			@media (min-width: 992px) {
+				display: flex;
+			}	
+		}
+	}
+}
+
+.menuList {
+	li {
+		a {
+			font-weight: 500;
+			font-size: $header-font-size;
+
+			&:hover {
+				color: $lighter-brown;
+			}
+
+			&.active {
+				// pitää ylikirjoittaa bootsrapin color
+				color: $light-brown !important; 
+				font-weight: 700;
+				font-size: $header-font-size + 2;
+			}
+		}
+	}
+}
+
+.sidebar {
+	width: 280px;
+	min-height: fit-content;
+	height: 100% !important;
+	z-index: 1200;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white !important;
+	
+	@media (min-width: 992px) {
+		display: none;
+	}
+
+	ul {
+		margin-top: 20px;
+		align-items: center;
+		align-content: center;
+		display: flex;
+		width: 100%;
+		height: fit-content;
+
+		li {
+			border-top: 1px solid $sidebar-divider;
+			width: 80%;
+			padding-bottom: 10px;
+			padding-top: 10px;
+
+			&:first-child {
+				border-top: transparent;
+			}
+		}
+	}
+	
+}
+
+.hero-wrapper {
+	margin-top: $header-height + $header-top-bar-height + $header-bottom-bar-height;
+	min-height: $hero-height;
+	position: relative;
+
+	&::before {
+		background-color: rgba(0, 0, 0, 0.5);
+		content: '';
+		min-height: $hero-height;
+		position:absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.hero {
+		background-image: url(../img/leatherwork.jpg);
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		min-height: $hero-height;
+		color: $white-text;
+		justify-content: center;
+
+		
+		h1 {
+			max-width: 950px;
+			z-index: 1;
+			margin-bottom: 30px;
+		}
+	
+		div {
+			z-index: 1;
+		}
+	}
+}
+
+.link-button {
+	background-color: $button-bg;
+	color: $button-color;
+	border: 1px solid $button-color;
+	border-radius: 0px;
+	font-size: large;
+
+	&:active {
+		border-color: $button-color !important; 
+		background-color: $button-active-color !important;
+	}
+
+	&:hover {
+		background-color: $button-bg;
+		border: 1px solid $button-color;
+		color: $button-color;
+	}
+}
+
+.features {
+	background-color: $header-bg;
+	min-height: $hero-height;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		padding-bottom: 15px;
+	}
+
+	div {
+		display: flex;
+		flex-flow: row wrap;
+		width: 65%;
+		justify-content: space-evenly;
+
+		div.card {
+			margin-bottom: 20px;
+
+			.link-button {
+				background-color: $button-light-bg;
+			}
+		}
+	}
+}
+
+.news {
+	padding-bottom: 200px;
+
+	h1 {
+		margin-bottom: 20px;
+	}
+}
