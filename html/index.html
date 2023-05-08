@@ -22,12 +22,12 @@
 	<div class="header fixed-top">
 		<div class="bar top"></div>
 
-		<nav class="navbar justify-content-center flex-column flex-sm-row">
+		<nav class="navbar justify-content-center flex-row flex-m-column">
 			<img src="../img/SuutariNiemi.png" alt="Suutari Niemi Lappeenranta">
 	
 			<div class="divider"></div>
 
-			<ul class="navbar-nav nav-fill flex-row align-items-center">
+			<ul id="menuList" class="navbar-nav nav-fill flex-row align-items-center menuLsit">
 				<li class="nav-item">
 					<a href="#" class="nav-link active">Etusivu</a>
 				</li>
@@ -39,15 +39,31 @@
 				</li>
 			</ul>
 			
-			<div class="divider"></div>
+			<div class="divider phone"></div>
 
-			<div class="navbar-nav flex-row">
+			<div class="navbar-nav flex-row phone">
 				<img id="phoneImage" src="../img/puhelinIkoni.png"	alt="Puhelinnumero: ">
 				<span>044 454 6868</span>
 			</div>
+
+			<button class="btn btn-primary toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false">Näytä</button>
 		</nav>
 
 		<div class="bar bottom"></div>
+	</div>
+
+	<div id="sidebar" class="flex-shrink-0 p-3 bg-light collapse sidebar">
+		<ul class="navbar-nav nav-fill flex-col align-items-center menuList">
+			<li class="nav-item">
+				<a href="#" class="nav-link active">Etusivu</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Palvelut</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">Yhteystiedot</a>
+			</li>
+		</ul>
 	</div>
 
 	<div class="hero-wrapper">
