@@ -34,29 +34,169 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var queryData = {
+    "query": [
+        {
+            "code": "Kuukausi",
+            "selection": {
+                "filter": "item",
+                "values": [
+                    "2020M01",
+                    "2020M02",
+                    "2020M03",
+                    "2020M04",
+                    "2020M05",
+                    "2020M06",
+                    "2020M07",
+                    "2020M08",
+                    "2020M09",
+                    "2020M10",
+                    "2020M11",
+                    "2020M12",
+                    "2021M01",
+                    "2021M02",
+                    "2021M03",
+                    "2021M04",
+                    "2021M05",
+                    "2021M06",
+                    "2021M07",
+                    "2021M08",
+                    "2021M09",
+                    "2021M10",
+                    "2021M11",
+                    "2021M12",
+                    "2022M01",
+                    "2022M02",
+                    "2022M03",
+                    "2022M04",
+                    "2022M05",
+                    "2022M06",
+                    "2022M07",
+                    "2022M08",
+                    "2022M09",
+                    "2022M10",
+                    "2022M11",
+                    "2022M12",
+                    "2023M01",
+                    "2023M02",
+                    "2023M03"
+                ]
+            }
+        },
+        {
+            "code": "Hyödyke",
+            "selection": {
+                "filter": "item",
+                "values": [
+                    "0"
+                ]
+            }
+        },
+        {
+            "code": "Tiedot",
+            "selection": {
+                "filter": "item",
+                "values": [
+                    "indeksipisteluku",
+                    "vuosimuutos",
+                    "kuukausimuutos"
+                ]
+            }
+        }
+    ],
+    "response": {
+        "format": "json-stat2"
+    }
+};
 var consumerpriceindexTable = document.getElementById("consumerpriceindexTable");
 if (consumerpriceindexTable) {
-    getConsumerpriceIndex();
+    getConsumerpriceIndex(consumerpriceindexTable);
 }
 else {
     console.error("consumerpriceindexTable elementtiä ei löydetty!");
 }
-function getConsumerpriceIndex() {
+function getConsumerpriceIndex(table) {
     return __awaiter(this, void 0, void 0, function () {
-        var response, jsonData, head, body, trhead;
+        return __generator(this, function (_a) {
+            postData("https://pxdata.stat.fi:443/PxWeb/api/v1/fi/StatFin/khi/statfin_khi_pxt_11xb.px", queryData).then(function (data) {
+                console.log(data); // JSON data parsed by `data.json()` call
+                // Arvot
+                var monthObj = data.dimension.Kuukausi;
+                var dataObj = data.dimension.Tiedot;
+                var dataLabels = dataObj.category.label;
+                var monthKeys = Object.keys(monthObj.category.index);
+                var monthValues = monthObj.category.label;
+                var dataValues = data.value;
+                var dataColCount = data.size.length;
+                // Taulukon header ja body
+                var head = document.createElement("thead");
+                var body = document.createElement("tbody");
+                // Otsikko
+                var headRow1 = document.createElement("tr");
+                var headCell1 = document.createElement("th");
+                headCell1.innerText = data.label;
+                headCell1.colSpan = dataColCount + 1; // data columnit ja kuukaudet
+                headRow1.appendChild(headCell1);
+                // Toinen otsikko rivi
+                var headRow2 = document.createElement("tr");
+                var headCell2 = document.createElement("th");
+                headCell2.innerText = monthObj.label;
+                headRow2.appendChild(headCell2);
+                for (var key in dataLabels) {
+                    var headCellData = document.createElement("th");
+                    headCellData.innerText = dataLabels[key];
+                    headRow2.appendChild(headCellData);
+                }
+                // lisää osat
+                head.appendChild(headRow1);
+                head.appendChild(headRow2);
+                // Keho
+                for (var i = data.size[0] - 1; i >= 0; i--) {
+                    var row = document.createElement("tr");
+                    // Kuukausi
+                    var monthCell = document.createElement("th");
+                    monthCell.innerText = monthValues[monthKeys[i]];
+                    row.appendChild(monthCell);
+                    // Arvot
+                    var dataIndexBegin = i * 3;
+                    for (var j = dataIndexBegin; j < dataIndexBegin + dataColCount; j++) {
+                        var dataCell = document.createElement("th");
+                        dataCell.innerText = dataValues[j];
+                        row.appendChild(dataCell);
+                    }
+                    body.appendChild(row);
+                }
+                // Lisää osat
+                table.appendChild(head);
+                table.appendChild(body);
+            });
+            return [2 /*return*/];
+        });
+    });
+}
+function postData(url, data) {
+    if (url === void 0) { url = ""; }
+    if (data === void 0) { data = {}; }
+    return __awaiter(this, void 0, void 0, function () {
+        var response;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, fetch("https://pxdata.stat.fi:443/PxWeb/api/v1/fi/StatFin/khi/statfin_khi_pxt_11xb.px")];
+                case 0: return [4 /*yield*/, fetch(url, {
+                        method: "POST",
+                        mode: "cors",
+                        cache: "no-cache",
+                        credentials: "same-origin",
+                        headers: {
+                            "Content-Type": "application/json",
+                            // 'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        redirect: "follow",
+                        referrerPolicy: "no-referrer",
+                        body: JSON.stringify(data), // body data type must match "Content-Type" header
+                    })];
                 case 1:
                     response = _a.sent();
-                    return [4 /*yield*/, response.json()];
-                case 2:
-                    jsonData = _a.sent();
-                    console.log(jsonData);
-                    head = consumerpriceindexTable.childNodes[0];
-                    body = consumerpriceindexTable.childNodes[1];
-                    trhead = document.createElement("tr");
-                    return [2 /*return*/];
+                    return [2 /*return*/, response.json()]; // parses JSON response into native JavaScript objects
             }
         });
     });
