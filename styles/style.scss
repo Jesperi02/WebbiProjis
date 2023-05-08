@@ -9,6 +9,8 @@ $header-height: 120px;
 $header-top-bar-height: 6px;
 $header-bottom-bar-height: 1px;
 
+$sidebar-divider: #353535c2;
+
 $hero-height: 600px;
 
 $button-bg: #f6f2ee;
@@ -57,6 +59,7 @@ $button-active-color: #bb824a;
 
 		.toggler {
 			display: flex;
+			border: 1px solid $sidebar-divider;
 
 			@media (min-width: 992px) { 
 				display: none;
@@ -108,7 +111,7 @@ $button-active-color: #bb824a;
 .sidebar {
 	width: 280px;
 	min-height: fit-content;
-	height: 100%;
+	height: 100% !important;
 	z-index: 1200;
 	display: flex;
 	position: fixed;
@@ -129,9 +132,14 @@ $button-active-color: #bb824a;
 		height: fit-content;
 
 		li {
-			border-bottom: $button-color;
-			width: 90%;
-			margin-bottom: 10px;
+			border-top: 1px solid $sidebar-divider;
+			width: 80%;
+			padding-bottom: 10px;
+			padding-top: 10px;
+
+			&:first-child {
+				border-top: transparent;
+			}
 		}
 	}
 	
