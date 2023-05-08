@@ -19,17 +19,6 @@ Here are the variables we include (note that the `:root` is required) that can b
 These CSS variables are available everywhere, regardless of color mode.
 
 ```css
-{{< root.inline >}}
-{{- $css := readFile "dist/css/bootstrap.css" -}}
-{{- $match := findRE ":root,\n\[data-bs-theme=light\] {([^}]*)}" $css 1 -}}
-
-{{- if (eq (len $match) 0) -}}
-{{- errorf ´Got no matches for :root in %q!´ $.Page.Path -}}
-{{- end -}}
-
-{{- index $match 0 -}}
-
-{{< /root.inline >}}
 ```
 
 ### Dark mode
@@ -37,13 +26,6 @@ These CSS variables are available everywhere, regardless of color mode.
 These variables are scoped to our built-in dark mode.
 
 ```css
-{{< root.inline >}}
-{{- $css := readFile "dist/css/bootstrap.css" -}}
-{{- if (eq (len $match) 0) -}}
-{{- errorf "Got no matches for [data-bs-theme=dark] in %q!" $.Page.Path -}}
-{{- end -}}
-{{- index $match 0 -}}
-{{< /root.inline >}}
 ```
 
 ## Component variables
