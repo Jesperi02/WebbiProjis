@@ -118,6 +118,8 @@
   margin-top: 127px;
   min-height: 600px;
   position: relative;
+  right: 0;
+  left: 0;
 }
 .hero-wrapper::before {
   background-color: rgba(0, 0, 0, 0.5);
@@ -172,6 +174,9 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  right: 0;
+  left: 0;
+  position: relative;
 }
 .features h2 {
   padding-bottom: 15px;

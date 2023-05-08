@@ -153,6 +153,8 @@ $button-active-color: #bb824a;
 	margin-top: $header-height + $header-top-bar-height + $header-bottom-bar-height;
 	min-height: $hero-height;
 	position: relative;
+	right: 0;
+	left: 0;
 
 	&::before {
 		background-color: rgba(0, 0, 0, 0.5);
@@ -214,6 +216,9 @@ $button-active-color: #bb824a;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	right: 0;
+	left: 0;
+	position: relative;
 
 	h2 {
 		padding-bottom: 15px;
